@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0; 
+}
+body{
+    width: 985px;
+    height: 406px;
+    background-color: #EBE7DB;
+    font-family: 'Nunito', sans-serif;
+}
+.mainTitle{
+    position: relative;
+    z-index: 0;
+    margin-top: -543px;
+    margin-left: 300px;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 50px;
+    font-size: 32px;
+    font-weight: 800;
+    color: #393232;
+    background-color: #FFFCF2;
+    -webkit-app-region : drag;
+}
+.input_maintitle{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: -500px;
+    margin-left: 66px;
+    color: #eb5e28;
+}
+.title{
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* INPUT TABLE STYLING */
+.inputTable{
+    position: inherit;
+    background-color: #393232;
+    height: 493px;
+    width: 300px;
+    padding-top: 50px;
+}
+.inputTable table{
+    border: none;
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+    color: #fffcf2;
+    font-size: 14px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-top: 16px;
+}
+.inputTable table tr{
+    height: 22px;
+}
+.inputTable table tr td:nth-child(1){
+    padding-right: 10px;
+}
+
+table input{
+    color: #eb5e28;
+    font-weight: 800;
+    font-size: 12px;
+    font-family: 'Open Sans', sans-serif;
+     width: 60px;
+     height: 20px;
+     outline: none;
+     text-align: center;
+     border: none;
+     background-color: #FFFCF2;
+     border-radius: 10px; 
+}
+
+.inputTable tr td:nth-child(3) p{
+    padding-left: 10px;
+}
+
+.output_parameter table tr td:nth-child(2) p{
+    width: 60px;
+    height: 20px;
+    border: 1px solid #EBE7DB;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #EBE7DB;
+    color: #eb5e28;
+}
+.output_parameter table{
+    font-size: 12px;
+    background-color: #FFFCF2;
+    border: none;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 800;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 40px;
+    padding-bottom: 5px;
+    width: fit-content;
+    color: #403d39;
+}
+.output_parameter table tr{
+    height: 24px;
+}
+.output_parameter .outputs table{
+    width: 170px;
+}
+.output_parameter .snubberParameter table{
+    width: 170px;
+}
+.output_parameter .inductor table{
+    width: 170px;
+}
+.output_parameter .capacitor table{
+    width: 170px;
+}
+.output_parameter .transformer table{
+    width: 250px;
+}
+
+.output_parameter{
+    margin-left: 8px;
+    margin-top: 20px;
+}
+.outputs{
+    margin-left: 320px;
+    margin-top: 10px;
+}
+.snubberParameter{
+    margin-left: 320px;
+    margin-top: 20px;
+}
+.transformer{
+    margin-left: 510px;
+    margin-top: -270px;
+}
+.inductor{
+    margin-left: 780px;
+    margin-top: -348px;
+}
+.capacitor{
+    margin-left: 780px;
+    margin-top: 20px; 
+}
+
+/*BUTTONS*/
+.tombol{
+    margin-left: 390px;
+    margin-top: 30px;
+}
+.tombol button{
+    border: none;
+    background: rgb(255,164,80);
+    background: linear-gradient(270deg, rgba(255,164,80,1) 0%, rgba(235,94,40,1) 86%);
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 20px;
+}
+.tombol button:hover{
+    cursor: pointer;
+    background: rgb(64,61,57);
+    background: linear-gradient(32deg, rgba(64,61,57,1) 0%, rgba(99,89,74,1) 100%);
+}
+
+/*Bagian background judul-judul output*/
+.output_titles{
+    margin-top: 48px;
+}
+.output_titles p{
+    width: 170px;
+    height: 34px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgb(255,164,80);
+    background: linear-gradient(270deg, rgba(255,164,80,1) 0%, rgba(235,94,40,1) 86%);  
+}
+.output_titles_output{
+    margin-left: 328px;
+    margin-top: 25px;
+}
+.output_titles_snubber{
+    margin-left: 328px;
+    margin-top: 84px;
+}
+.output_titles_transformer{
+    margin-left: 518px;
+    margin-top: -153px;
+    padding-right: 80px;
+}
+.output_titles_inductor{
+    margin-left: 788px;
+    margin-top: -33px;
+}
+.output_titles_capacitor{
+    margin-left: 788px;
+    margin-top: 205px;
+}
+
+/*Bagian text judul-judul output*/
+.output_titles_text p{
+    color: #FFFCF2;
+    font-size: 16px;
+    font-weight: 700;
+}
+.output_titles_output_text{
+    margin-left: 340px;
+    margin-top: -266px;
+}
+.output_titles_snubber_text{
+    margin-left: 340px;
+    margin-top: 96px;
+}
+.output_titles_transformer_text{
+    margin-left: 530px;
+    margin-top: -140px;
+}
+.output_titles_inductor_text{
+    margin-left: 800px;
+    margin-top: -20px;
+}
+.output_titles_capacitor_text{
+    margin-left: 800px;
+    margin-top: 217px;
+}
+
+#reminder{
+    width: 250px;
+    background: rgb(255,164,80);
+    background: linear-gradient(270deg, rgba(255,164,80,1) 0%, rgba(235,94,40,1) 86%);  
+    height: 100px;
+    border-radius: 15px;
+    position: absolute;
+    margin-left: 330px;
+    margin-top: -20px;
+    display: none;
+    z-index: 2;
+}
+#reminder p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFCF2;
+}
+#reminder button{
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: #393232;
+    font-weight: 700;
+    background-color: #FFFCF2;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+#reminder button:hover{
+    cursor: pointer;
+    background: rgb(64,61,57);
+    background: linear-gradient(32deg, rgba(64,61,57,1) 0%, rgba(99,89,74,1) 100%);
+    color: #FFFCF2;
+}
+#cover{
+    width: 985px;
+    height: 543px;
+    background-color: black;
+    margin-top: -370px;
+    position: relative;
+    z-index: 1;
+    display: none;
+    opacity: 0.5;
+}
+
+.profile{
+    background: rgb(255,164,80);
+    background: linear-gradient(270deg, rgba(255,164,80,1) 0%, rgba(235,94,40,1) 86%);  
+    margin-left: 329px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #fffcf2;
+    width: 160px;
+    height: 59px;
+    border-radius: 10px;
+    margin-top: 18px;
+    padding-left: 10px;
+    padding-top: 4px;
+}
+.togglers button{
+    background: rgb(255,164,80);
+    background: linear-gradient(270deg, rgba(255,164,80,1) 0%, rgba(235,94,40,1) 86%); 
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: #FFFCF2;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.togglers button:hover{
+    cursor: pointer;
+    background: rgb(64,61,57);
+    background: linear-gradient(32deg, rgba(64,61,57,1) 0%, rgba(99,89,74,1) 100%);
+}
+.togglers{
+    position: absolute;
+    margin-top: -416px;
+    margin-left: 894px;
+    z-index: 1;
+    -webkit-app-region : no-drag;
+}
+button{
+    outline: none;
+}
