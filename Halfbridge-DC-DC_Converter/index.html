@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title id="title">Half Bridge DC-DC Converter</title>
+  <link rel="stylesheet" href="res/css/index.css">
+</head>
+<body id="body">
+<main>
+  <div class="inputTable">
+    <form>
+        <table>
+            <tr>
+                <td><label for="Vin">Vin</label></td>
+                <td><input type="number" id="Vin" name="input"></td>
+                <td><p>V</p></td>
+            </tr>
+            <tr>
+                <td><label for="Vo">Vo</label></td>
+                <td><input type="number" id="Vo" name="input"></td>
+                <td><p>V</p></td>
+            </tr>
+            <tr>
+                <td><label for="Io">Io</label></td>
+                <td><input type="number" id="Io" name="input"></td>
+                <td><p>A</p></td>
+            </tr>
+            <tr>
+                <td><label for="duty_cycle">Duty Cycle</label></td>
+                <td><input type="number" id="duty_cycle" name="input"></td>
+                <td><p>%</p></td>
+            </tr>
+            <tr>
+                <td><label for="fs">fs</label></td>
+                <td><input type="number" id="fs" name="input"></td>
+                <td><p>Hz</p></td>
+            </tr>
+            <tr>
+                <td><label for="efficiency">Efficiency</label></td>
+                <td><input type="number" id="efficiency" name="input"></td>
+                <td><p>%</p></td>
+            </tr>
+            <tr>
+                <td><label for="delta_ilx">ΔILx</label></td>
+                <td><input type="number" id="delta_ilx" name="input"></td>
+                <td><p>%</p></td>
+            </tr>
+            <tr>
+                <td><label for="delta_vo">ΔVo</label></td>
+                <td><input type="number" id="delta_vo" name="input"></td>
+                <td><p>%</p></td>
+            </tr>
+            <tr>
+                <td><label for="Vf">Vf</label></td>
+                <td><input type="number" id="Vf" name="input"></td>
+                <td><p>V</p></td>
+            </tr>
+            <tr>
+                <td><label for="tFall">tFall</label></td>
+                <td><input type="number" id="tFall" name="input"></td>
+                <td><p>ns</p></td>
+            </tr>
+            <tr>
+                <td><label for="acInductor">Ac Inductor</label></td>
+                <td><input type="number" id="acInductor" name="input"></td>
+                <td><p>cm²</p></td>
+            </tr>
+            <tr>
+                <td><label for="acTransformer">Ac Transformer</label></td>
+                <td><input type="number" id="acTransformer" name="input"></td>
+                <td><p>cm²</p></td>
+            </tr>
+            <tr>
+                <td><label for="Bmax">Bmax</label></td>
+                <td><input type="number" id="Bmax" name="input"></td>
+                <td><p>Tesla</p></td>
+            </tr>
+            <tr>
+                <td><label for="Db_L">Dbob L</label></td>
+                <td><input type="number" id="Db_L" name="input"></td>
+                <td><p>mm</p></td>
+            </tr>
+            <tr>
+                <td><label for="Db_T">Dbob Tr</label></td>
+                <td><input type="number" id="Db_T" name="input"></td>
+                <td><p>mm</p></td>
+            </tr>
+            <tr>
+                <td><label for="splitNumberInductor">ΣSplit L</label></td>
+                <td><input type="number" id="splitNumberInductor" name="input"></td>
+                <td><p>split</p></td>
+            </tr>
+            <tr>
+                <td><label for="splitNumberPrimaryOfTransformer">ΣSplit Tr</label></td>
+                <td><input type="number" id="splitNumberPrimaryOfTransformer" name="input"></td>
+                <td><p>split</p></td>
+            </tr>     
+            <tr>
+                <td><label for="wire_length">Wire Length</label></td>
+                <td><input type="number" id="wire_length" name="input"></td>
+                <td><p>%</p></td>
+            </tr>
+            <tr>
+                <td><label for="additional_winding">Additional Winding</label></td>
+                <td><input type="number" id="additional_winding" name="input"></td>
+            </tr>         
+        </table>
+    </form>
+</div>
+<div class="mainTitle">Halfbridge DC-DC Converter Project</div>
+
+<div class="output_parameter">
+    <div class="outputs">
+        <form>
+            <table>
+                <tr>
+                    <td><p>R Beban</p></td>
+                    <td><p id="r_beban" class="output"></p></td>
+                    <td>Ω</td>
+                </tr>
+                <tr>
+                    <td><p>Duty Cycle</p></td>
+                    <td><p id="duty_cycle_out" class="output"></p></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="snubberParameter">
+        <form>
+            <table>
+                <tr>
+                    <td><p>Ion</p></td>
+                    <td><p id="Ion" class="output"></p></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td><p>Voff</p></td>
+                    <td><p id="Voff" class="output"></p></td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td><p>R Snubber</p></td>
+                    <td><p id="Rsnubber" class="output"></p></td>
+                    <td>Ω</td>
+                </tr>
+                <tr>
+                    <td><p>C Snubber</p></td>
+                    <td><p id="Csnubber" class="output"></p></td>
+                    <td>nF</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="transformer">
+        <form>
+            <table>
+                <tr>
+                    <td><p>Turn Ratio (Np:Ns)</p></td>
+                    <td><p id="turn_ratio" class="output"></p></td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td><p>Irms (p)</p></td>
+                    <td><p id="rms_primary_current" class="output"></p></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td><p>Irms (s)</p></td>
+                    <td><p id="rms_secondary_current" class="output"></p></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td><p>Np</p></td>
+                    <td><p id="number_of_primary_winding" class="output"></p></td>
+                    <td>lilitan</td>
+                </tr>
+                <tr>
+                    <td><p>Ns</p></td>
+                    <td><p id="number_of_secondary_winding" class="output"></p></td>
+                    <td>lilitan</td>
+                </tr>
+                <tr>
+                    <td><p>ΣSplit (s)</p></td>
+                    <td><p id="secondary_split_value" class="output"></p></td>
+                    <td>Split</td>
+                </tr>
+                <tr>
+                    <td><p>Diameter of Wire</p></td>
+                    <td><p id="diameter_of_wire" class="output"></p></td>
+                    <td>mm</td>
+                </tr>
+                <tr>
+                    <td><p>Circumference of Bobbin</p></td>
+                    <td><p id="circumference_bobbin" class="output"></p></td>
+                    <td>cm</td>
+                </tr>
+                <tr>
+                    <td><p>Primary Length Wire</p></td>
+                    <td><p id="primary_length_wire" class="output"></p></td>
+                    <td>m</td>
+                </tr>
+                <tr>
+                    <td><p>Secondary Length Wire</p></td>
+                    <td><p id="secondary_length_wire" class="output"></p></td>
+                    <td>m</td>
+                </tr>
+                <tr>
+                    <td><p>Total Length Wire</p></td>
+                    <td><p id="total_length_wire" class="output"></p></td>
+                    <td>m</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="inductor">
+        <form>
+            <table>
+                <tr>
+                    <td><p>L</p></td>
+                    <td><p id="L" class="output"></p></td>
+                    <td>μH</td>
+                </tr>
+                <tr>
+                    <td><p>ΔiL</p></td>
+                    <td><p id="delta_il_inductor" class="output"></p></td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td><p>Winding Inductor</p></td>
+                    <td><p id="winding_inductor" class="output"></p></td>
+                    <td>turns</td>
+                </tr>
+                <tr>
+                    <td><p>lg</p></td>
+                    <td><p id="lg" class="output"></p></td>
+                    <td>mm</td>
+                </tr>
+                <tr>
+                    <td><p>dw</p></td>
+                    <td><p id="dw" class="output"></p></td>
+                    <td>mm</td>
+                </tr>
+                <tr>
+                    <td><p>Length of Wire</p></td>
+                    <td><p id="length_wire" class="output"></p></td>
+                    <td>m</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="capacitor">
+        <form>
+            <table>
+                <tr>
+                    <td><p>ΔVo</p></td>
+                    <td><p id="delta_vo_capacitor" class="output"></p></td>
+                    <td>V</td>
+                </tr>
+                <tr>
+                    <td><p>Co</p></td>
+                    <td><p id="Co" class="output"></p></td>
+                    <td>μF</td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+<div class="tombol">        
+    <button id="calculate" onclick="jalan()">
+        Calculate</button>
+    <button onclick="reset()">
+        Reset</button>
+    <button id="close">
+        Exit</button>
+    <button class="tombol_default" onclick="defaultNum()">Default</button>
+</div>
+<div class="input_maintitle">Input Variable</div>
+
+<div class="output_titles">
+    <p class="output_titles_output"></p>
+    <p class="output_titles_snubber"></p>
+    <p class="output_titles_transformer"></p>
+    <p class="output_titles_inductor"></p>
+    <p class="output_titles_capacitor"></p>
+</div>
+
+<div class="output_titles_text">
+    <p class="output_titles_output_text">Outputs</p>
+    <p class="output_titles_snubber_text">Snubber Output</p>
+    <p class="output_titles_transformer_text">Transformer Output</p>
+    <p class="output_titles_inductor_text">Inductor Output</p>
+    <p class="output_titles_capacitor_text">Capacitor Output</p>
+</div>
+
+<div id="reminder">
+    <p>Harap isi Input Variable!</p>
+    <button onclick="closeRemind()">OK</button>
+</div>
+
+<div id="cover"></div>
+
+<div class="profile">
+    <p>Falia Innocentia A.</p>
+    <p>1310181046</p>
+    <p>3 D4 ELIN B</p>
+</div>
+
+</main>
+<div class="togglers">
+    <button id="minimize">🗕</button>
+    <button id="maximize">🗖</button>
+</div>
+</body>
+  <script src="res/js/aligner.js"></script>
+  <script src="res/js/menuHandler.js"></script>
+  <script src="res/js/init.js"></script>
+  <script src="res/js/project.js"></script>
+</html>
