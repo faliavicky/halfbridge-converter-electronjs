@@ -3,7 +3,12 @@ In recent years, the power converter has been developed for electrical systems. 
 <br><br>
 After making the Halfbridge DC-DC Converter manual calculation work, circuits, and main circuit board, application software is created with the purpose of creating a Halfbridge DC-DC Converter Calculation Application Software by implementing all of the manual Halfbridge DC-DC Converter calculations have been done into a program.
 <br><br>
-The software that is used to create the Halfbridge DC-DC Converter Calculation software is Electron, which is a framework for building desktop applications using JavaScript, HTML, and CSS.
+The app is created using:<br>
+![Electron.js](https://img.shields.io/badge/Electron-191970?style=for-the-badge&logo=Electron&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+
+![App Screenshot](https://github.com/faliavicky/halfbridge-converter-electronjs/blob/54a6092d0bae9e3066c5c40ab2a5bcd706e4a87b/Halfbridge-DC-DC_Converter/screenshots/1310181046_Falia%20Innocentia%20A_User%20Interface%20Project.png)
+
+The full halfbridge DC-DC calculation can be seen on the full [final report](https://github.com/faliavicky/halfbridge-converter-electronjs/blob/main/Halfbridge-DC-DC_Converter/report/1310181046_Falia%20Innocentia%20A_FINAL%20REPORT.pdf).
 
 # Input Variables
 The input variables are the variables that are needed for calculating.
